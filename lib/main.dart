@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pixeltrue/pages/splash_screen.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'features/splash_screen.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -12,6 +12,7 @@ Future<void> main() async{
       const MyApp()
   );
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pixeltrue/pages/auth/login.dart';
+import '../auth/presentaion/login.dart';
 
 class OnboardingSecond extends StatelessWidget {
   const OnboardingSecond({super.key});

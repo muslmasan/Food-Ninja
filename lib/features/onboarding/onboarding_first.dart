@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pixeltrue/pages/onboarding/onboarding_second.dart';
+
+import 'onboarding_second.dart';
 
 class OnboardingFirst extends StatelessWidget {
   const OnboardingFirst({super.key});

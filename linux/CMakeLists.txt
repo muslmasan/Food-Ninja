@@ -2,10 +2,10 @@
 cmake_minimum_required(VERSION 3.13)
 project(runner LANGUAGES CXX)
 
-# The name of the executable created for the application. Change this to change
-# the on-disk name of your application.
+# The name of the executable created for the presentaion. Change this to change
+# the on-disk name of your presentaion.
 set(BINARY_NAME "pixeltrue")
-# The unique GTK application identifier for this application. See:
+# The unique GTK presentaion identifier for this presentaion. See:
 # https://wiki.gnome.org/HowDoI/ChooseApplicationID
 set(APPLICATION_ID "com.example.pixeltrue")
 
@@ -71,7 +71,7 @@ set_target_properties(${BINARY_NAME}
 
 
 # Generated plugin build rules, which manage building the plugins and adding
-# them to the application.
+# them to the presentaion.
 include(flutter/generated_plugins.cmake)
 
 
