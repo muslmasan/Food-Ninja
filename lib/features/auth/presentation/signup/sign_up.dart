@@ -1,24 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pixeltrue/home.dart';
-import 'package:provider/provider.dart';
-
-import '../application/auth_provider.dart';
-class Login extends StatefulWidget {
+class Login extends StatelessWidget {
   const Login({super.key});
 
   @override
-  State<Login> createState() => _LoginState();
-}
-
-class _LoginState extends State<Login> {
-  final TextEditingController emailController =TextEditingController();
-  final TextEditingController passwordController =TextEditingController();
-
-  @override
   Widget build(BuildContext context) {
-    final auth = Provider.of<AuthProvider>(context);
     return Scaffold(
         body: SafeArea(
           child: Stack(
@@ -84,7 +71,7 @@ class _LoginState extends State<Login> {
                           Text(
                             'Login To Your Account',
                             style: TextStyle(
-                              fontFamily: 'bentonBold'
+                                fontFamily: 'bentonBold'
                             ),
                           ),
                           SizedBox(height: 32,),
@@ -101,13 +88,12 @@ class _LoginState extends State<Login> {
                               ],
                             ),
                             child: TextField(
-                              controller: emailController,
                               decoration: InputDecoration(
                                 labelText: 'Email',
                                 labelStyle: TextStyle(color: Colors.grey),
                                 border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(15),
-                                  borderSide: BorderSide.none
+                                    borderRadius: BorderRadius.circular(15),
+                                    borderSide: BorderSide.none
                                 ),
                                 fillColor: Colors.white,
 
@@ -130,8 +116,6 @@ class _LoginState extends State<Login> {
                               ],
                             ),
                             child: TextField(
-                              obscureText: true,
-                              controller: passwordController,
                               decoration: InputDecoration(
                                 labelText: 'Password',
                                 labelStyle: TextStyle(color: Colors.grey),
@@ -181,7 +165,7 @@ class _LoginState extends State<Login> {
                                       Text(
                                         'Facebook',
                                         style: TextStyle(
-                                          fontFamily: 'bentonBold'
+                                            fontFamily: 'bentonBold'
                                         ),
                                       )
                                     ],
@@ -256,23 +240,10 @@ class _LoginState extends State<Login> {
                             width: 157,
                             height: 57,
                             child: ElevatedButton(
-                              onPressed: () async{
-                                await auth.login(emailController.text, passwordController.text);
-                                if(!context.mounted) return ;
-                                try{
-                                  if(auth.user != null ){
-                                    Navigator.of(context).pushReplacement(
-                                        MaterialPageRoute(builder: (context)=>Home())
-                                    );
-                                  }else if (auth.error != null){
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text(auth.error!))
-                                    );
-                                  }
-                                }catch (e){
-                                  print(e.toString());
-                                }
-
+                              onPressed: (){
+                                Navigator.of(context).push(
+                                    MaterialPageRoute(builder: (context)=>Login())
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.transparent,
@@ -280,6 +251,7 @@ class _LoginState extends State<Login> {
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15)
                                 ),
+
                               ),
                               child: Text(
                                 'Login',

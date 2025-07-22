@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'onboarding/onboarding_first.dart';
+import 'package:pixeltrue/features/auth/presentation/auth_gate.dart';
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
         if(!mounted) return;
         Navigator.of(context).pushReplacement(
           MaterialPageRoute(
-              builder: (context)=> OnboardingFirst()
+              builder: (context)=> AuthGate()
           )
         );
         }
