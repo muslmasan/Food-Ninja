@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../auth/presentaion/login.dart';
+import '../auth/presentation/login.dart';
 
 class OnboardingSecond extends StatelessWidget {
   const OnboardingSecond({super.key});
@@ -55,7 +55,7 @@ class OnboardingSecond extends StatelessWidget {
                     height: 57,
                     child: ElevatedButton(
                       onPressed: (){
-                        Navigator.of(context).push(
+                        Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (context)=>Login())
                         );
                       },
