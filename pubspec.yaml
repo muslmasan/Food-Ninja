@@ -91,17 +91,20 @@ flutter:
     - family: bentonMedium
       fonts:
         - asset: assets/fonts/Benton-Sans-Medium.otf
+    - family: bentonRegular
+      fonts:
+        - asset: assets/fonts/Benton-Sans-Regular.otf
 #        - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_native_splash:
-  color: "#FFFFFF"
+  color: "#d4e4ed"
   image: assets/images/Logo.png
   android: true
   android_12:
     image: assets/images/Logo.png
-    color: "#FFFFFF"
+    color: "#d4e4ed"
   ios: true
   web: false
