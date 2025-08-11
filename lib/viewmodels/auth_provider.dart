@@ -1,6 +1,8 @@
-import 'package:pixeltrue/features/auth/domain/auth_services.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
+import '../Model/services/auth_services.dart';
+
 
 class AuthProvider with ChangeNotifier {
   final AuthServices _authServices;

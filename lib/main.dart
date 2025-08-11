@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
-import 'package:pixeltrue/features/auth/application/auth_provider.dart';
-import 'package:pixeltrue/features/auth/presentation/auth_gate.dart';
+import 'package:pixeltrue/viewmodels/auth_provider.dart';
+import 'package:pixeltrue/views/auth/auth_gate.dart';
 import 'package:provider/provider.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'features/auth/data/auth_repository.dart';
-import 'features/auth/domain/auth_services.dart';
+
+import 'Model/repositories/auth_repository.dart';
+import 'Model/services/auth_services.dart';
+
 
 Future<void> main() async{
   final widgetsBinding = WidgetsFlutterBinding.ensureInitialized();

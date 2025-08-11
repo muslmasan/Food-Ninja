@@ -1,12 +1,14 @@
-import 'package:flutter/gestures.dart';
+import'package:flutter/gestures.dart';
 import'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pixeltrue/features/auth/presentation/signup/sign_up.dart';
-import 'package:pixeltrue/home.dart';
+import 'package:pixeltrue/views/auth/sign_up.dart';
+import 'package:pixeltrue/views/home.dart';
 import 'package:provider/provider.dart';
 
-import '../application/auth_provider.dart';
+import '../../viewmodels/auth_provider.dart';
+
+
 class Login extends StatefulWidget {
   const Login({super.key});
 

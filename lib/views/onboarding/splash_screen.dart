@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pixeltrue/features/auth/presentation/auth_gate.dart';
+
+import '../auth/auth_gate.dart';
+
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 

@@ -1,5 +1,5 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
-import '../data/auth_repository.dart';
+import '../repositories/auth_repository.dart';
 
 class AuthServices{
   final AuthRepository _repository;

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pixeltrue/features/auth/application/auth_provider.dart';
 import 'package:provider/provider.dart';
 
-import 'features/auth/presentation/auth_gate.dart';
-
+import '../viewmodels/auth_provider.dart';
+import 'auth/auth_gate.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
